@@ -6,54 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Board</title>
 
-    <style>
-        body {
-
-            background-image: url('tile.jpg');
-
-        }
-
-        #Header {
-            text-align: center;
-            font-size: 4em;
-            font-family: "Comic Sans MS", cursive, sans-serif
-        }
-
-
-        .outsider {
-            border: 3px solid lightblue;
-            text-align: center;
-            padding: 0.5;
-            background-image: url('formbg.jpg');
-        }
-
-        textarea {
-            margin-top: 1%;
-        }
-
-        .inner {
-            margin-right: auto;
-            font-size: 2em;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        input {
-            margin-top: 1%;
-        }
-
-        /* notepad styling  */
-        #note {
-            display: flex;
-            flex-wrap: wrap;
-            height: 250px;
-        }
-
-        #container {
-            overflow: auto;
-            display: flex;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"
+   
 
 
 
@@ -63,68 +17,39 @@
 <body>
 
     <!-- Heading of the webpage -->
-    <div id="Header">
+    <div id="Header" class="jumbotron text-center">
         My Task board
     </div>
-    <!-- inserting text to the note -->
-    <div class="outsider">
-        <div class="inner">
-            <label for="content">Type Text Here: </label>
-            <textarea id="content" name="content" rows="4" cols="50"></textarea>
+
+
+
+    <div class="wrap">
+        <div class="inputs" >
+            <form>
+                <label for="TaskHeaderBox"><b>Type Text Header here:</b></label>
+                <input type="text" class="inner" id="TaskHeaderBox">
+                <br>   
+                <label for="DateTasksBox"><b>Date:</b></label>
+                <input type="date" class="inner" id="DateTasksBox">
+                <br>
+                <label style="font-size: x-large;" for="TimeTasksBox"><b>Time:</b></label>
+                <input type="time" class="inner" id="TimeTasksBox">
+                <br>
+                 <label for="taskDescriptionBox"><b>Text
+                    Description:</b></label>
+                <textarea class="inner" rows="5" id="taskDescriptionBox" name="text"></textarea><br>
+                 <br>
+                <button type="button" class="btn btn-info" id="Createbtn" onclick="executeTaskProcces()">Create Task
+                    <span ></span></button>
+                <button type="button" class="btn btn-info" id="Clearbtn" onclick="resetUI()">Clear <span
+                ></span></button>
+            </form>
         </div>
-        <div class="inner1">
-            <label for="date">Insert Date :</label>
-            <input type="date" id="date">
-        </div>
-        <div class="inner2">
-            <label for="time">Insert Time: </label>
-            <input type="time" id="time">
-        </div>
 
-        <button id="createnote"> Send </button>
-        <button id="restform">Reset</button>
-    </div>
+        <div id="container"></div>
 
-    <div id="container">
-        <div id="note"></div>
-    </div>
-
-    <script>
-        var content5 = document.querySelectorAll("button")[0];
-        // create the notepad
-        create = document.querySelector("#createnote");
-
-        content5.onclick = function (e) {
-            var noteItem = document.createElement("div");
-            let mes = document.querySelector('textarea');
-
-
-            noteItem.style.backgroundImage = "url(notebg.png) "
-            noteItem.style.width = "200px"
-            noteItem.style.height = "250px"
-            noteItem.backgroundRepeat = "no-repeat"
-
-            noteItem.innerText = mes.value
-
-            document.querySelector("#note").appendChild(noteItem)
-
-        }
-
-
-
-
-
-
-    </script>
-
-
-
-
-
-
-
-
-
+       <script src="main.js"></script>
 </body>
 
 </html>
+

@@ -1,0 +1,98 @@
+body {
+
+    background-image: url('tile.jpg');
+    
+
+}
+
+#Header {
+    text-align: center;
+    font-size: 4em;
+    font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+
+.wrap {
+    text-align: center;
+    padding: 0.5;
+    background-image: url('formbg.jpg');
+    
+}
+
+textarea {
+    margin-top: 1%;
+}
+.form-control {
+    margin: 1.5px;
+}
+
+#container {
+    background: url('/tile.jpg');
+}
+.inner {
+    margin-right: auto;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+#Createbtn {
+    background-color: green;
+    color: black;
+}
+
+#Createbtn:hover {
+    background-color: rgb(25, 214, 25);
+    color: black;
+}
+
+#Clearbtn {
+    background-color: pink;
+    color: black;
+}
+
+#Clearbtn:hover {
+    background-color: rgb(247, 35, 35);
+    color: black;
+}
+
+.note {
+   
+    background-image: url("notebg.png");
+     background-repeat: no-repeat;
+    position: relative;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 15px;
+    animation: fade 1.5s linear;
+    display: flex; 
+    float: left; 
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.DateTimeZone {
+    position: absolute;
+    left: 15px;
+    bottom: 7px;
+    width: 100px;
+    height: 60px;
+}
+
+.TaskNoteDisc {
+    overflow-y: auto;
+    word-wrap: break-word;
+    width: 240px;
+    height: 200px;
+}
+
+
