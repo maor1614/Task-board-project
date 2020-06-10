@@ -68,6 +68,7 @@ textarea {
     animation: fade 1.5s linear;
     display: flex; 
     float: left; 
+    
 }
 
 @keyframes fade {

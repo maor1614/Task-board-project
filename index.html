@@ -6,50 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Board</title>
 
-    <link rel="stylesheet" href="styles.css"
-   
-
+    <link rel="stylesheet" href="styles.css">
 
 
 </head>
 
-
 <body>
 
     <!-- Heading of the webpage -->
-    <div id="Header" class="jumbotron text-center">
+    <div id="Header">
         My Task board
     </div>
 
-
-
     <div class="wrap">
-        <div class="inputs" >
+        <div class="inputs">
             <form>
                 <label for="TaskHeaderBox"><b>Type Text Header here:</b></label>
                 <input type="text" class="inner" id="TaskHeaderBox">
-                <br>   
-                <label for="DateTasksBox"><b>Date:</b></label>
-                <input type="date" class="inner" id="DateTasksBox">
+                <br>
+                <label for="DateTasksBox"><b>Insert Date:</b></label>
+                <input style="font-size: x-large;" type="date" class="inner" id="DateTasksBox">
                 <br>
                 <label style="font-size: x-large;" for="TimeTasksBox"><b>Time:</b></label>
                 <input type="time" class="inner" id="TimeTasksBox">
                 <br>
-                 <label for="taskDescriptionBox"><b>Text
-                    Description:</b></label>
+                <label for="taskDescriptionBox"><b>Text
+                        Description:</b></label>
                 <textarea class="inner" rows="5" id="taskDescriptionBox" name="text"></textarea><br>
-                 <br>
+                <br>
                 <button type="button" class="btn btn-info" id="Createbtn" onclick="executeTaskProcces()">Create Task
-                    <span ></span></button>
-                <button type="button" class="btn btn-info" id="Clearbtn" onclick="resetUI()">Clear <span
-                ></span></button>
+                    <span></span></button>
+                <button type="button" class="btn btn-info" id="Clearbtn" onclick="resetUI()">Clear
+                    <span></span></button>
             </form>
         </div>
 
         <div id="container"></div>
 
-       <script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
-
