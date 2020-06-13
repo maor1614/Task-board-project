@@ -116,10 +116,9 @@ function displaytasks() {
          let div = document.createElement("div");
         div.className = "note row-fluid";
     
-        let x = document.createElement("span");
-        x.id = tasksArray[i].id;
-        x.onclick = deletetask;
-        
+        // let x = document.createElement("span");
+        // x.id = tasksArray[i].id;
+        // x.onclick = deletetask;
         
         let div2 = document.createElement("div");
         div2.className = "DateTimeZone";
@@ -127,16 +126,22 @@ function displaytasks() {
         let paragraph = document.createElement("p");
         paragraph.className = "TaskNoteDisc";
 
-        div.innerHTML ="<b>"+tasksArray[i].haeder+"<b>";
+        div.innerHTML ="<p><b>"+tasksArray[i].haeder+"<b></p>";
 
         paragraph.innerHTML = tasksArray[i].taskDescription;
 
         div2.innerHTML ="<b>"+tasksArray[i].date+"<b>"+"<br>"+"<b>"+tasksArray[i].time+"<b>";
         
-        container.appendChild(div);
-        div.appendChild(x);
-        div.appendChild(div2);
-        div.appendChild(paragraph);
+         container.appendChild(div);
+         div.appendChild(paragraph);
+        //  div.appendChild(x);
+         div.appendChild(div2);
+         
+
+        // container.appendChild(div);
+        // div.appendChild(x);
+        // div.appendChild(div2);
+        // div.appendChild(paragraph);
         
     }
 }
@@ -144,6 +149,7 @@ function displaytasks() {
 
 // function that delete the task from the UI and LocalStorage.
 function deletetask(e) {
+
     // for (let i = 0; i < tasksArray.length; i++) {
     //     if (tasksArray[i].id == this.id) {
     //         tasksArray.splice(i, 1);
@@ -215,3 +221,5 @@ function  initInputBoxColor() {
     taskDescriptionBox.style.backgroundColor = "";
     TimeTasksBox.style.backgroundColor = "";
 }
+
+
