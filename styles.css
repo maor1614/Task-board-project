@@ -52,7 +52,7 @@ textarea {
 }
 
 #Clearbtn {
-    background-color: pink;
+    background-color: red;
     color: black;
 }
 
@@ -93,6 +93,7 @@ textarea {
     height: 59px;
     
 }
+
 p{
     word-break: break-word;
     
@@ -100,12 +101,11 @@ p{
 
 .TaskNoteDisc {
     width: 160px;
-    height: 120px;
     word-break: break-word;
     position: relative;
-    bottom: 35px;
+    bottom: 73px;
     overflow: auto;
-    height:115px
+    height: 82px;
     
 }
 
@@ -113,3 +113,26 @@ p{
     position: relative;
     bottom: 50px;
 }
+
+
+
+
+.x-Button{
+background: url('x-button.png')no-repeat;
+ position: relative;
+ left: 142px;
+ width: 30px;
+ height: 30px;
+ bottom: 100px;
+ visibility: hidden;
+ opacity: 0;
+ cursor: pointer;
+ transition: opacity 1s;
+}
+
+
+.note.row-fluid:hover .x-Button {
+    visibility: visible;
+    opacity: 1;
+}
+
