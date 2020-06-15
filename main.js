@@ -150,13 +150,13 @@ function displaytasks() {
 
 // function that delete the task from the UI and LocalStorage.
 function deletetask() {
-
+    index--
     for (let i = 0; i < tasksArray.length; i++) {
         if (i == this.id) {
             tasksArray.splice(i, 1);
-             localStorage.removeItem(this.id);
-          
+            localStorage.removeItem("Task" + index);
             localStorage.setItem("Tasks", JSON.stringify(tasksArray));
+            
         }
     }
 
